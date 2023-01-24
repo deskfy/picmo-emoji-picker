@@ -21,7 +21,6 @@ export class Emoji extends PicMoElement {
       font-size: var(--emoji-size);
       height: 100%;
       justify-content: center;
-      align-items: center;
       margin: 0;
       overflow: hidden;
       padding: 0;

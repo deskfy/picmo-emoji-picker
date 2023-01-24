@@ -1,5 +1,5 @@
 import { toElement } from './common';
-import { lightTheme, darkTheme, createPicker } from '../../packages/picmo/src/index';
+import { lightTheme, darkTheme, createPicker } from '../../packages/deskfy-custom-picmo/src/index';
 import './EmojiButton.css';
 
 function getUIFlags(options: any) {

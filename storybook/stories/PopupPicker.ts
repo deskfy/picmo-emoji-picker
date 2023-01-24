@@ -1,5 +1,5 @@
 import { toElement } from './common';
-import { createPopup } from '../../packages/popup-picker/src/index';
+import { createPopup } from '../../packages/deskfy-custom-popup-picker/src/index';
 
 function handleEmojiSelection(button: HTMLButtonElement) {
   return selection => {

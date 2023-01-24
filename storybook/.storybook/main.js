@@ -28,9 +28,9 @@ module.exports = {
 
     config.resolve.fallback.fs = false;
 
-    config.resolve.alias.picmo = path.resolve(__dirname, '../../packages/picmo/src');
-    config.resolve.alias['@picmo/popup-picker'] = path.resolve(__dirname, '../../packages/popup-picker/src');
-    config.resolve.alias['@picmo/renderer-twemoji'] = path.resolve(__dirname, '../../packages/renderer-twemoji/src');
+    config.resolve.alias['deskfy-custom-picmo'] = path.resolve(__dirname, '../../packages/deskfy-custom-picmo/src');
+    config.resolve.alias['deskfy-custom-popup-picker'] = path.resolve(__dirname, '../../packages/deskfy-custom-popup-picker/src');
+    config.resolve.alias['deskfy-renderer-emoji'] = path.resolve(__dirname, '../../packages/deskfy-renderer-emoji/src');
 
     config.module.rules.push({
       test: /\.svg$/i,

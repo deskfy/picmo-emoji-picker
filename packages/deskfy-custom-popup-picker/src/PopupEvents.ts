@@ -1,4 +1,4 @@
-import { ExternalEvent } from 'deskfy-custom-picmo';
+import { ExternalEvent } from '../../deskfy-custom-picmo';
 
 export type PopupEvent = 
   ExternalEvent |

@@ -1,31 +1,31 @@
 {
-  "name": "deskfy-custom-picmo",
-  "version": "1.0.2",
-  "description": "JavaScript emoji picker. Any app, any framework.",
-  "keywords": [
-    "emoji",
-    "emoji picker",
-    "javascript"
-  ],
-  "type": "module",
-  "types": "dist/index.d.ts",
+  "name": "deskfy-renderer-emoji",
+  "version": "1.0.4",
+  "description": "Twemoji renderer for PicMo",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
   "scripts": {
+    "build:sprites": "node scripts/generateSprites.js",
     "prepublishOnly": "npm run clean && npm run build",
-    "precommit": "npm-run-all lint check test",
-    "build": "npm run check && vite build && npm run build:types && npm run build:css",
-    "build:css": "postcss src/styles/index.css -o dist/index.css --config ../../postcss.config.js",
+    "precommit": "npm-run-all lint check",
+    "build": "npm run build:sprites && npm run check && vite build && npm run build:css && npm run build:types",
+    "build:css": "postcss src/twemoji.css -o dist/index.css --config ../../postcss.config.js",
     "build:types": "tsc --declaration --emitDeclarationOnly",
     "check": "tsc --noEmit",
     "clean": "rimraf dist",
     "lint": "eslint src",
-    "start": "vite",
-    "test:watch": "jest --watch src",
-    "test": "jest --coverage src"
+    "start": "vite"
   },
+  "keywords": [
+    "popup",
+    "emoji",
+    "emoji picker",
+    "javascript"
+  ],
   "author": "Joe Attardi <jattardi@gmail.com> (https://joeattardi.dev)",
   "repository": "joeattardi/picmo",
   "homepage": "https://picmojs.com",
@@ -33,24 +33,23 @@
   "funding": "https://github.com/sponsors/joeattardi",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@lit-labs/context": "^0.1.3",
-    "emojibase": "^6.1.0",
-    "lit": "^2.3.1"
+    "twemoji-parser": "^14.0.0"
+  },
+  "peerDependencies": {
+    "picmo": "^5.7.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^8.17.1",
     "@testing-library/user-event": "^14.4.3",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "camelcase": "^7.0.0",
     "cssnano": "^5.1.13",
+    "emojibase-data": "^7.0.1",
     "eslint": "^8.22.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
     "jest-raw-loader": "^1.0.1",
-    "msw": "^0.39.2",
-    "node-fetch": "^2.6.7",
     "postcss": "^8.4.16",
     "postcss-cli": "^10.0.0",
     "postcss-import": "^14.1.0",
@@ -58,6 +57,7 @@
     "postcss-nesting": "^10.1.10",
     "prettier": "^2.7.1",
     "style-inject": "^0.3.0",
+    "svg-sprite": "^1.5.4",
     "ts-jest": "^28.0.8",
     "vite": "^3.0.7"
   }

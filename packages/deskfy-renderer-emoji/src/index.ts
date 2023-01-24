@@ -1,6 +1,6 @@
 import { parse } from 'twemoji-parser';
 
-import { EmojiRecord, EmojiSelection, Renderer, toElement, createStyleInjector } from 'deskfy-custom-picmo';
+import { EmojiRecord, EmojiSelection, Renderer, toElement, createStyleInjector } from '../../deskfy-custom-picmo';
 
 import css from './twemoji.css?inline';
 import * as spriteSheets from './sprites';
