@@ -102,6 +102,7 @@ export class EmojiPickerElement extends LitElement {
   @contextProvider({ context: optionsContext })
   @property({ attribute: false })
   options: PickerOptions;
+  customEmojis: EmojiRecord[];
 
   @state()
   private categories: Category[];
@@ -114,7 +115,7 @@ export class EmojiPickerElement extends LitElement {
   constructor(
     options: PickerOptions, 
     pickerId: string,
-    private customEmojis: EmojiRecord[],
+    customEmojis: EmojiRecord[],
     emojiDataPromise: Promise<DataStore>) {
     super();
 
@@ -128,6 +129,7 @@ export class EmojiPickerElement extends LitElement {
         this.options.emojiVersion as number
     };
     this.options = options;
+    this.customEmojis = customEmojis;
 
     emojiDataPromise.then(emojiData => {
       this.emojiData = emojiData;

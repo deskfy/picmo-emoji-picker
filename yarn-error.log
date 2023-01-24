@@ -1,0 +1,80 @@
+Arguments: 
+  /Users/brunofranca/.nvm/versions/node/v16.16.0/bin/node /Users/brunofranca/.nvm/versions/node/v16.16.0/bin/yarn
+
+PATH: 
+  /Users/brunofranca/.nvm/versions/node/v16.16.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/brunofranca/.nvm/versions/node/v16.16.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.16.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: Failed to replace env in config: ${NPM_TOKEN}
+      at /Users/brunofranca/.nvm/versions/node/v16.16.0/lib/node_modules/yarn/lib/cli.js:94933:13
+      at String.replace (<anonymous>)
+      at envReplace (/Users/brunofranca/.nvm/versions/node/v16.16.0/lib/node_modules/yarn/lib/cli.js:94928:16)
+      at Function.normalizeConfig (/Users/brunofranca/.nvm/versions/node/v16.16.0/lib/node_modules/yarn/lib/cli.js:31938:69)
+      at NpmRegistry.<anonymous> (/Users/brunofranca/.nvm/versions/node/v16.16.0/lib/node_modules/yarn/lib/cli.js:31968:34)
+      at Generator.next (<anonymous>)
+      at step (/Users/brunofranca/.nvm/versions/node/v16.16.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/brunofranca/.nvm/versions/node/v16.16.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "deskfy-picmo",
+    "private": true,
+    "type": "module",
+    "description": "JavaScript emoji picker. Any app, any framework.",
+    "keywords": [
+      "emoji",
+      "emoji picker",
+      "javascript"
+    ],
+    "workspaces": [
+      "./packages/*"
+    ],
+    "scripts": {
+      "prepublishOnly": "npm run build",
+      "prebuild:docs": "npm install --prefix docs",
+      "prebuild:storybook": "npm run build",
+      "postinstall": "npm install --prefix docs && npm install --prefix storybook",
+      "build": "lerna run build",
+      "precommit": "lerna run lint && lerna run check && lerna run test",
+      "clean": "lerna run clean",
+      "deploy:docs": "npm run build:docs && netlify deploy --prod",
+      "test": "lerna run test",
+      "test:watch": "lerna run --parallel test:watch",
+      "lint": "lerna run lint",
+      "start": "npm run --prefix storybook start",
+      "build:storybook": "npm run --prefix storybook build",
+      "build:docs": "npm run build:storybook && npm run --prefix docs build",
+      "start:docs": "npm run --prefix docs start"
+    },
+    "author": "Joe Attardi <jattardi@gmail.com> (https://joeattardi.dev)",
+    "repository": "joeattardi/picmo",
+    "homepage": "https://picmojs.com",
+    "bugs": "https://github.com/joeattardi/picmo/issues",
+    "funding": "https://github.com/sponsors/joeattardi",
+    "license": "MIT",
+    "devDependencies": {
+      "@testing-library/jest-dom": "^5.16.5",
+      "@typescript-eslint/eslint-plugin": "^5.33.1",
+      "lerna": "^5.1.8",
+      "nx": "^14.4.3"
+    },
+    "dependencies": {
+      "emojibase": "^6.1.0",
+      "twemoji": "^14.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

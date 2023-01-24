@@ -204,7 +204,7 @@
   }
 }
 
-.overlay {
+.picmo-picker .overlay {
   background: rgba(0, 0, 0, 0.75);
   height: 100%;
   left: 0;
@@ -214,7 +214,7 @@
   z-index: 1000;
 }
 
-.content {
+.picmo-picker .content {
   position: relative;
   overflow: hidden;
   height: var(--content-height);
@@ -239,13 +239,13 @@
   }
 }
 
-.pluginContainer {
+.picmo-picker .pluginContainer {
   margin: 0.5em;
   display: flex;
   flex-direction: row;
 }
 
-.header {
+.picmo-picker .header {
   background-color: var(--secondary-background-color);
   padding-top: 8px;
   padding-bottom: 8px;
@@ -255,7 +255,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .placeholder {
+  .picmo-picker .placeholder {
     background: var(--placeholder-background-color);
     position: relative;
     overflow: hidden;
