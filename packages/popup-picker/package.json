@@ -1,6 +1,6 @@
 {
   "name": "deskfy-custom-popup-picker",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Popup emoji picker for PicMo",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

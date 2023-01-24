@@ -1,6 +1,6 @@
 {
   "name": "deskfy-renderer-emoji",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Twemoji renderer for PicMo",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

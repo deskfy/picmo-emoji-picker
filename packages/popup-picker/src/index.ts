@@ -1,4 +1,4 @@
-import { PickerOptions, createStyleInjector } from 'picmo';
+import { PickerOptions, createStyleInjector } from 'deskfy-custom-picmo';
 import { PopupOptions } from './types';
 import { PopupPickerController } from './popupPicker';
 

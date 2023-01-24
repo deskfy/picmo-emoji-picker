@@ -12,7 +12,7 @@ const bundles = [
       sourcemap: true,
       file: 'dist/umd/picmo.js',
       format: 'umd',
-      name: 'picmo'
+      name: 'deskfy-custom-picmo'
     }
   },
   {

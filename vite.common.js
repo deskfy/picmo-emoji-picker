@@ -4,11 +4,11 @@ import nesting from 'postcss-nesting';
 import mixins from 'postcss-mixins';
 
 export default function createConfig(basedir, moduleName) {
-  const rollupOptions = moduleName === 'picmo' ? {} : {
-    external: ['picmo'],
+  const rollupOptions = moduleName === 'deskfy-custom-picmo' ? {} : {
+    external: ['deskfy-custom-picmo'],
     output: {
       globals: {
-        picmo: 'picmo'
+        "deskfy-custom-picmo": 'deskfy-custom-picmo'
       }
     }
   };

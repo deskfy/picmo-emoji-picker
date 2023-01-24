@@ -1,4 +1,4 @@
-import { createPicker } from 'picmo';
+import { createPicker } from 'deskfy-custom-picmo';
 import { TwemojiRenderer } from './src/index';
 
 const rootElement = document.querySelector('#picker');

@@ -8,7 +8,7 @@ import {
   FocusTrap,
   PickerOptions,
   ExternalEvent,
-} from 'picmo';
+} from 'deskfy-custom-picmo';
 import { PopupEvent } from './PopupEvents';
 import { setPosition, PositionCleanup } from './positioning';
 import { PopupOptions, Position } from './types';
